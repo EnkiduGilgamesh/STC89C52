@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\ledandtube" 
+PRINT(".\Listings\ledandtube.m51") RAMSIZE(256) 

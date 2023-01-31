@@ -1,0 +1,8 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\mykey.obj",
+".\Objects\myled.obj",
+".\Objects\mylib.obj",
+".\Objects\mytube.obj" 
+TO ".\Objects\Key" 
+PRINT(".\Listings\Key.m51") RAMSIZE(256) 

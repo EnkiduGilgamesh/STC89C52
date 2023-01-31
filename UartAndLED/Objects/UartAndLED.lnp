@@ -1,0 +1,10 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\mykey.obj",
+".\Objects\myled.obj",
+".\Objects\mylib.obj",
+".\Objects\mytimer.obj",
+".\Objects\mytube.obj",
+".\Objects\myuart.obj" 
+TO ".\Objects\UartAndLED" 
+PRINT(".\Listings\UartAndLED.m51") RAMSIZE(256) 

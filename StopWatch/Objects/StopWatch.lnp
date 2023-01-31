@@ -1,0 +1,9 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\mykey.obj",
+".\Objects\myled.obj",
+".\Objects\mylib.obj",
+".\Objects\mytube.obj",
+".\Objects\mytimer.obj" 
+TO ".\Objects\StopWatch" 
+PRINT(".\Listings\StopWatch.m51") RAMSIZE(256) 

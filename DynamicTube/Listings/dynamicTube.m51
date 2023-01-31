@@ -1,0 +1,231 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/18/2023  21:56:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\dynamicTube PRINT (.\Listings\dynamic
+>> Tube.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\dynamicTube (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0042H     UNIT         ?DT?MAIN
+            IDATA   004AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     008BH     UNIT         ?C?LIB_CODE
+            CODE    011AH     0066H     UNIT         ?PR?_DISPLAYNUM_CA?MAIN
+            CODE    0180H     004DH     UNIT         ?C_INITSEG
+            CODE    01CDH     0040H     UNIT         ?PR?_DISPLAYNUMBIT_CA?MAIN
+            CODE    020DH     0025H     UNIT         ?PR?MAIN?MAIN
+            CODE    0232H     001BH     UNIT         ?PR?_DELAY_T?MAIN
+            CODE    024DH     0012H     UNIT         ?PR?DELAYNIXIETUBE?MAIN
+            CODE    025FH     000BH     UNIT         ?PR?_DELAY?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\dynamicTube (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?_DISPLAYNUM_CA?MAIN
+  +--> ?PR?_DELAY_T?MAIN
+
+?PR?_DISPLAYNUM_CA?MAIN
+  +--> ?PR?DELAYNIXIETUBE?MAIN
+  +--> ?PR?_DISPLAYNUMBIT_CA?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/18/2023  21:56:12  PAGE 2
+
+
+
+?PR?DELAYNIXIETUBE?MAIN
+  +--> ?PR?_DISPLAYNUMBIT_CA?MAIN
+
+?PR?_DELAY_T?MAIN
+  +--> ?PR?_DISPLAYNUM_CA?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\dynamicTube (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0003H         SEGMENT       ?C_C51STARTUP
+  I:004AH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0006H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0003H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0003H         LINE#         133
+  C:0005H         LINE#         134
+  C:0006H         LINE#         135
+  C:0007H         LINE#         136
+  C:0009H         LINE#         185
+  C:000CH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0008H         PUBLIC        nixieTubeNoDot_CA
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:0018H         PUBLIC        nixieTubeNoDot_CC
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/18/2023  21:56:12  PAGE 3
+
+
+  C:025FH         PUBLIC        _delay
+  C:011AH         PUBLIC        _displayNum_CA
+  D:00B8H         PUBLIC        IP
+  C:0250H         PUBLIC        delayNixieTube
+  C:020DH         PUBLIC        main
+  C:01CDH         PUBLIC        _displayNumBit_CA
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0028H         PUBLIC        nixieTubeDot_CA
+  D:0038H         PUBLIC        nixieTubeDot_CC
+  D:0048H         PUBLIC        cnt
+  C:0232H         PUBLIC        _delay_t
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.7       PUBLIC        C1
+  B:00A0H.6       PUBLIC        C2
+  B:00A0H.5       PUBLIC        C3
+  B:00A0H.4       PUBLIC        C4
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          L?0029
+  -------         ENDPROC       L?0029
+  -------         PROC          DELAYNIXIETUBE
+  -------         DO            
+  D:0006H         SYMBOL        t
+  -------         ENDDO         
+  C:0250H         LINE#         24
+  C:0250H         LINE#         25
+  C:0254H         LINE#         26
+  C:025EH         LINE#         27
+  -------         ENDPROC       DELAYNIXIETUBE
+  -------         PROC          _DISPLAYNUMBIT_CA
+  D:0007H         SYMBOL        b
+  D:0005H         SYMBOL        n
+  C:01CDH         LINE#         29
+  C:01CDH         LINE#         30
+  C:01D0H         LINE#         32
+  C:01DFH         LINE#         33
+  C:01DFH         LINE#         34
+  C:01E1H         LINE#         35
+  C:01E3H         LINE#         36
+  C:01E3H         LINE#         37
+  C:01E7H         LINE#         38
+  C:01E9H         LINE#         39
+  C:01E9H         LINE#         40
+  C:01F1H         LINE#         41
+  C:01F3H         LINE#         42
+  C:01F3H         LINE#         43
+  C:01FBH         LINE#         44
+  C:01FDH         LINE#         46
+  C:01FDH         LINE#         47
+  C:0205H         LINE#         48
+  C:0205H         LINE#         49
+  C:0205H         LINE#         51
+  C:020CH         LINE#         52
+  -------         ENDPROC       _DISPLAYNUMBIT_CA
+  -------         PROC          _DISPLAYNUM_CA
+  D:0002H         SYMBOL        n
+  C:011AH         LINE#         54
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/18/2023  21:56:12  PAGE 4
+
+
+  C:011EH         LINE#         55
+  C:0129H         LINE#         56
+  C:012CH         LINE#         58
+  C:0148H         LINE#         59
+  C:014BH         LINE#         61
+  C:016AH         LINE#         62
+  C:016DH         LINE#         64
+  C:017DH         LINE#         65
+  -------         ENDPROC       _DISPLAYNUM_CA
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        t
+  C:025FH         LINE#         20
+  C:025FH         LINE#         21
+  C:0269H         LINE#         22
+  -------         ENDPROC       _DELAY
+  -------         PROC          _DELAY_T
+  D:0082H         SYMBOL        t
+  C:0232H         LINE#         9
+  C:0236H         LINE#         10
+  C:0243H         LINE#         11
+  C:024AH         LINE#         12
+  C:024CH         LINE#         13
+  -------         ENDPROC       _DELAY_T
+  -------         PROC          MAIN
+  C:020DH         LINE#         15
+  C:020DH         LINE#         16
+  C:020DH         LINE#         22
+  C:0214H         LINE#         23
+  C:021BH         LINE#         25
+  C:0223H         LINE#         26
+  C:0230H         LINE#         27
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?SIDIV
+  C:008FH         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?UIDIV
+  C:00C5H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+
+Program Size: data=75.0 xdata=0 code=618
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

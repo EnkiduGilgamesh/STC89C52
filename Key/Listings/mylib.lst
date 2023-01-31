@@ -1,0 +1,48 @@
+C51 COMPILER V9.60.7.0   MYLIB                                                             01/28/2023 11:31:31 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MYLIB
+OBJECT MODULE PLACED IN .\Objects\mylib.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\lib\mylib.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listi
+                    -ngs\mylib.lst) TABS(2) OBJECT(.\Objects\mylib.obj)
+
+line level    source
+
+   1          /*-*- gcc 10.3.0 -*-*/
+   2          /*-*- coding:utf-8 -*-*/
+   3          /***************************************************************************************************
+   4          * File: \mylib.c                                                                                   *
+   5          * Project: lib                                                                                     *
+   6          * Created Date: Wednesday Jan 18th 2023, 9:05:54 pm                                                *
+   7          * Author: Wenren Muyan                                                                             *
+   8          * Comments:                                                                                        *
+   9          * --------------------------------------------------------------------------------                 *
+  10          * Last Modified: 27/01/2023 11:15:51                                                               *
+  11          * Modified By: Wenren Muyan                                                                        *
+  12          * --------------------------------------------------------------------------------                 *
+  13          * Copyright (c) 2023 - future Wenren Muyan                                                         *
+  14          * --------------------------------------------------------------------------------                 *
+  15          * HISTORY:                                                                                         *
+  16          * Date        By        Comments                                                       *
+  17          * --------------------------------------------------------------------------------                 *
+  18          ***************************************************************************************************/
+  19          
+  20          #include "mylib.h"
+  21          
+  22          void delay(unsigned int t){
+  23   1        while(t--);
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     11    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

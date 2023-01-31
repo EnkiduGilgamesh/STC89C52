@@ -1,0 +1,294 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/28/2023  11:16:21  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj, .\Objects\mykey.obj, .\Objects\myled.obj, .\Objec
+>> ts\mylib.obj, .\Objects\mytube.obj TO .\Objects\Key PRINT (.\Listings\Key.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  .\Objects\mykey.obj (MYKEY)
+  .\Objects\myled.obj (MYLED)
+  .\Objects\mylib.obj (MYLIB)
+  .\Objects\mytube.obj (MYTUBE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\Key (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0040H     UNIT         ?DT?MYTUBE
+            IDATA   0048H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     008BH     UNIT         ?C?LIB_CODE
+            CODE    011AH     0066H     UNIT         ?PR?_DISPLAYNUM_CA?MYTUBE
+            CODE    0180H     0049H     UNIT         ?C_INITSEG
+            CODE    01C9H     0040H     UNIT         ?PR?_DISPLAYNUMBIT_CA?MYTUBE
+            CODE    0209H     0013H     UNIT         ?PR?SCANKEY?MAIN
+            CODE    021CH     0012H     UNIT         ?PR?PROGRAMTEST?MYLED
+            CODE    022EH     0012H     UNIT         ?PR?DELAYNIXIETUBE?MYTUBE
+            CODE    0240H     000BH     UNIT         ?PR?_DELAY?MYLIB
+            CODE    024BH     0005H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Key (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?SCANKEY?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/28/2023  11:16:21  PAGE 2
+
+
+
+?PR?SCANKEY?MAIN
+  +--> ?PR?_DELAY?MYLIB
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Key (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0003H         SEGMENT       ?C_C51STARTUP
+  I:0048H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0006H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0003H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0003H         LINE#         133
+  C:0005H         LINE#         134
+  C:0006H         LINE#         135
+  C:0007H         LINE#         136
+  C:0009H         LINE#         185
+  C:000CH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:024BH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0209H         PUBLIC        scanKey
+  B:00A0H.1       PUBLIC        SW3
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/28/2023  11:16:21  PAGE 3
+
+
+  D:00C8H         PUBLIC        T2CON
+  B:0090H.0       PUBLIC        D1
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          SCANKEY
+  C:0209H         LINE#         6
+  C:0209H         LINE#         7
+  C:020CH         LINE#         8
+  C:0213H         LINE#         9
+  C:0216H         LINE#         10
+  C:0219H         LINE#         11
+  C:021BH         LINE#         12
+  C:021BH         LINE#         13
+  C:021BH         LINE#         14
+  -------         ENDPROC       SCANKEY
+  -------         PROC          MAIN
+  C:024BH         LINE#         16
+  C:024BH         LINE#         17
+  C:024BH         LINE#         19
+  C:024EH         LINE#         20
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        MYKEY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         ENDMOD        MYKEY
+
+  -------         MODULE        MYLED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:021CH         PUBLIC        programTest
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  B:0090H.7       PUBLIC        D8
+  -------         PROC          PROGRAMTEST
+  C:021CH         LINE#         22
+  C:021CH         LINE#         23
+  C:021EH         LINE#         24
+  C:0225H         LINE#         25
+  C:0227H         LINE#         26
+  -------         ENDPROC       PROGRAMTEST
+  -------         ENDMOD        MYLED
+
+  -------         MODULE        MYLIB
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/28/2023  11:16:21  PAGE 4
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0240H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        t
+  C:0240H         LINE#         22
+  C:0240H         LINE#         23
+  C:024AH         LINE#         24
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        MYLIB
+
+  -------         MODULE        MYTUBE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0008H         PUBLIC        nixieTubeNoDot_CA
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:0018H         PUBLIC        nixieTubeNoDot_CC
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:011AH         PUBLIC        _displayNum_CA
+  D:00B8H         PUBLIC        IP
+  C:0231H         PUBLIC        delayNixieTube
+  C:01C9H         PUBLIC        _displayNumBit_CA
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0028H         PUBLIC        nixieTubeDot_CA
+  D:0038H         PUBLIC        nixieTubeDot_CC
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.7       PUBLIC        C1
+  B:00A0H.6       PUBLIC        C2
+  B:00A0H.5       PUBLIC        C3
+  B:00A0H.4       PUBLIC        C4
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          L?0015
+  -------         ENDPROC       L?0015
+  -------         PROC          DELAYNIXIETUBE
+  -------         DO            
+  D:0006H         SYMBOL        t
+  -------         ENDDO         
+  C:0231H         LINE#         24
+  C:0231H         LINE#         25
+  C:0235H         LINE#         26
+  C:023FH         LINE#         27
+  -------         ENDPROC       DELAYNIXIETUBE
+  -------         PROC          _DISPLAYNUMBIT_CA
+  D:0007H         SYMBOL        b
+  D:0005H         SYMBOL        n
+  C:01C9H         LINE#         29
+  C:01C9H         LINE#         30
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/28/2023  11:16:21  PAGE 5
+
+
+  C:01CCH         LINE#         32
+  C:01DBH         LINE#         33
+  C:01DBH         LINE#         34
+  C:01DDH         LINE#         35
+  C:01DFH         LINE#         36
+  C:01DFH         LINE#         37
+  C:01E3H         LINE#         38
+  C:01E5H         LINE#         39
+  C:01E5H         LINE#         40
+  C:01EDH         LINE#         41
+  C:01EFH         LINE#         42
+  C:01EFH         LINE#         43
+  C:01F7H         LINE#         44
+  C:01F9H         LINE#         46
+  C:01F9H         LINE#         47
+  C:0201H         LINE#         48
+  C:0201H         LINE#         49
+  C:0201H         LINE#         51
+  C:0208H         LINE#         52
+  -------         ENDPROC       _DISPLAYNUMBIT_CA
+  -------         PROC          _DISPLAYNUM_CA
+  D:0002H         SYMBOL        n
+  C:011AH         LINE#         54
+  C:011EH         LINE#         55
+  C:0129H         LINE#         56
+  C:012CH         LINE#         58
+  C:0148H         LINE#         59
+  C:014BH         LINE#         61
+  C:016AH         LINE#         62
+  C:016DH         LINE#         64
+  C:017DH         LINE#         65
+  -------         ENDPROC       _DISPLAYNUM_CA
+  -------         ENDMOD        MYTUBE
+
+  -------         MODULE        ?C?SIDIV
+  C:008FH         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?UIDIV
+  C:00C5H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PROGRAMTEST?MYLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAYNUM_CA?MYTUBE
+
+Program Size: data=73.0 xdata=0 code=592
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

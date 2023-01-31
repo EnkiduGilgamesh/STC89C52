@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/18/2023 21:56:12 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\lib) DEBUG OBJECTEXTEND PRINT(
+                    -.\Listings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "mytube.h"
+   3          #include "mylib.h"
+   4          #include "mytube.c"
+   5          #include "mylib.c"
+   6          
+   7          unsigned int cnt = 998;
+   8          
+   9          void delay_t(unsigned int t){
+  10   1        while(t--){
+  11   2          displayNum_CA(cnt);
+  12   2        }
+  13   1      }
+  14          
+  15          void main(){
+  16   1        while(1){
+  17   2          //for(cnt = 0; cnt < 10000; cnt++){
+  18   2          //  displayNum_CA(cnt);
+  19   2          //  delay_t(50000);
+  20   2          //}
+  21   2          
+  22   2          displayNum_CA(cnt);
+  23   2          delay_t(500);
+  24   2          
+  25   2          cnt++;
+  26   2          if(cnt == 10000) cnt = 0;
+  27   2        }
+  28   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    259    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     66    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,8 @@
+".\Objects\STARTUP.obj",
+".\Objects\mian.obj",
+".\Objects\mykey.obj",
+".\Objects\myled.obj",
+".\Objects\mylib.obj",
+".\Objects\mytube.obj" 
+TO ".\Objects\ExternalTimer" 
+PRINT(".\Listings\ExternalTimer.m51") RAMSIZE(256) 

@@ -1,0 +1,51 @@
+C51 COMPILER V9.60.7.0   MYLED                                                             01/28/2023 23:21:53 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MYLED
+OBJECT MODULE PLACED IN .\Objects\myled.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\lib\myled.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\lib) DEBUG OBJECTEXTEN
+                    -D PRINT(.\Listings\myled.lst) TABS(2) OBJECT(.\Objects\myled.obj)
+
+line level    source
+
+   1          /*-*- gcc 10.3.0 -*-*/
+   2          /*-*- coding:utf-8 -*-*/
+   3          /***************************************************************************************************
+   4          * File: \myled.c                                                                                   *
+   5          * Project: lib                                                                                     *
+   6          * Created Date: Thursday Jan 19th 2023, 12:02:35 am                                                *
+   7          * Author: Wenren Muyan                                                                             *
+   8          * Comments:                                                                                        *
+   9          * --------------------------------------------------------------------------------                 *
+  10          * Last Modified: 27/01/2023 11:16:14                                                               *
+  11          * Modified By: Wenren Muyan                                                                        *
+  12          * --------------------------------------------------------------------------------                 *
+  13          * Copyright (c) 2023 - future Wenren Muyan                                                         *
+  14          * --------------------------------------------------------------------------------                 *
+  15          * HISTORY:                                                                                         *
+  16          * Date        By        Comments                                                       *
+  17          * --------------------------------------------------------------------------------                 *
+  18          ***************************************************************************************************/
+  19          
+  20          #include "myled.h"
+  21          
+  22          void programTest(){
+  23   1          D8 = 0;
+  24   1          delay(50000);
+  25   1          D8 = 1;
+  26   1          delay(50000);
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     18    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
